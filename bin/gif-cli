@@ -1,0 +1,6 @@
+var GifCli = require("../lib")
+  , Package = require("../package")
+  , Clp = require("clp")
+  ;
+
+GifCli(process.argv[2]);

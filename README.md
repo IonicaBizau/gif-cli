@@ -17,6 +17,8 @@
 
 Gif animations in your terminal!
 
+![gif-cli](doc/nyan.gif)
+
 ## Installation
 
 ```sh
@@ -56,6 +58,9 @@ GifCli(__dirname + "/nyantocat.gif", function (err, frames) {
 });
 
 ```
+
+## Press Highlights
+None yet. If you wrote or found an article about this project, [add it][contributing] in this section.  :memo:
 
 ## Documentation
 

@@ -38,5 +38,8 @@
   "bugs": {
     "url": "https://github.com/IonicaBizau/gif-cli/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/gif-cli"
+  "homepage": "https://github.com/IonicaBizau/gif-cli",
+  "blah": {
+      "ex_img": "doc/nyan.gif"
+  }
 }

@@ -4,14 +4,8 @@
   "description": "Gif animations in your terminal!",
   "main": "lib/index.js",
   "bin": {
-      "gif": "./bin/gif-cli",
-      "gif-cli": "./bin/gif-cli"
-  },
-  "dependencies": {
-    "ascii-frames": "^0.2.0",
-    "gif-explode": "^0.0.1",
-    "image-to-ascii": "^2.0.0",
-    "tmp": "^0.0.27"
+    "gif": "./bin/gif-cli",
+    "gif-cli": "./bin/gif-cli"
   },
   "devDependencies": {},
   "scripts": {
@@ -20,6 +14,7 @@
   "author": "Ionică Bizău <bizauionica@gmail.com>",
   "license": "KINDLY",
   "directories": {
+    "doc": "doc",
     "example": "example"
   },
   "repository": {
@@ -40,6 +35,16 @@
   },
   "homepage": "https://github.com/IonicaBizau/gif-cli",
   "blah": {
-      "ex_img": "doc/nyan.gif"
+    "ex_img": "doc/nyan.gif"
+  },
+  "dependencies": {
+    "ascii-frames": "^0.2.0",
+    "gif-explode": "^0.0.1",
+    "bug-killer": "^4.0.0",
+    "is-there": "^4.0.0",
+    "image-to-ascii": "^2.0.0",
+    "one-by-one": "^2.0.0",
+    "cli-frames": "^2.0.0",
+    "tmp": "^0.0.27"
   }
 }

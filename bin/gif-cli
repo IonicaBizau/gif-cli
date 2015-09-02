@@ -4,11 +4,17 @@
 var GifCli = require("../lib")
   , CliFrames = require("cli-frames")
   , Logger = require("bug-killer")
+  , IsThere = require("is-there")
   ;
 
 // Show some helpful output
 if (!process.argv[2]) {
     return console.log("Usage: gif-cli some-image.gif");
+}
+
+// Check for existence
+if (!IsThere(process.argv[2])) {
+    return Logger.log(new Error("The input file doesn't exist."));
 }
 
 // Crunch the input

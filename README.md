@@ -21,7 +21,7 @@ Gif animations in your terminal!
 
 ## Installation
 
-This tool uses [`image-to-ascii`] as dependency–that means you have to [install GraphicsMagick first](https://github.com/IonicaBizau/image-to-ascii#installation). Then you can install `gif-cli`:
+This tool uses `image-to-ascii` as dependency–that means you have to [install GraphicsMagick first](https://github.com/IonicaBizau/image-to-ascii#installation). Then you can install `gif-cli`:
 
 ```sh
 $ npm i -g gif-cli

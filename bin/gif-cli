@@ -1,6 +1,27 @@
+#!/usr/bin/env node
+
+// Dependencies
 var GifCli = require("../lib")
-  , Package = require("../package")
-  , Clp = require("clp")
+  , CliFrames = require("cli-frames")
+  , Logger = require("bug-killer")
   ;
 
-GifCli(process.argv[2]);
+// Show some helpful output
+if (!process.argv[2]) {
+    return console.log("Usage: gif-cli some-image.gif");
+}
+
+// Crunch the input
+Logger.log("Crunching the gif animation.");
+GifCli(process.argv[2], function (err, frames) {
+    if (err) {
+        return Logger.log(err, "error");
+    }
+
+    var animation = new CliFrames();
+    animation.load(frames);
+    animation.start({
+        repeat: true
+      , delay: 50
+    });
+});

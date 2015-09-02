@@ -13,6 +13,26 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "KINDLY"
+  "author": "Ionică Bizău <bizauionica@gmail.com>",
+  "license": "KINDLY",
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/IonicaBizau/gif-cli"
+  },
+  "keywords": [
+    "gif",
+    "cli",
+    "command",
+    "line",
+    "terminal",
+    "ascii",
+    "art"
+  ],
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/gif-cli/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/gif-cli"
 }

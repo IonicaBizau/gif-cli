@@ -13,69 +13,104 @@
 <!-- * * * Thanks! * * *                                                    -->
 <!---------------------------------------------------------------------------->
 
-# `$ gif-cli` [![Donate now][donate-now]][paypal-donations]
 
-Gif animations in your terminal!
+<% // Dependencies %>
+<% var IsThere = require("is-there"); %>
+<% var Fs = require("fs"); %>
+<% var Path = require("path"); %>
+<% var Ul = require("ul"); %>
 
-![gif-cli](doc/nyan.gif)
+<% // Compute the directory paths %>
+<% var binPath = Path.join(_.path, "bin"); %>
+<% var examplesPath = Path.join(_.path, "examples"); %>
+<% var examplePath = Path.join(_.path, "example"); %>
+<% var example = IsThere(examplePath) ? examplePath : IsThere(examplesPath) ? examplesPath : null; %>
+<% var isCli = IsThere(binPath); %>
 
+<% if (_.pack.blah.h_img) { %>
+![<%- _.pack.name %>](<%- _.pack.blah.h_img %>)
+<% } %>
+
+<% // Create the name and description %>
+<% if (isCli) { %>
+# `$ <%- _.pack.name %>` [![Donate now][donate-now]][paypal-donations]
+<% } else { %>
+# <%- _.pack.name %> [![Donate now][donate-now]][paypal-donations]
+<% } %>
+<%- _.pack.description %>
+
+<% if (_.pack.blah.ex_img) { %>
+![<%- _.pack.name %>](<%-_.pack.blah.ex_img %>)
+<% } %>
+
+<% // INSTALLATION %>
 ## Installation
 
 This tool uses [`image-to-ascii`] as dependency–that means you have to [install GraphicsMagick first](https://github.com/IonicaBizau/image-to-ascii#installation). Then you can install `gif-cli`:
 
 ```sh
-$ npm i -g gif-cli
+$ npm i -g <%- _.pack.name %>
 ```
 
+<% // Cli usage %>
+<% if (isCli) { %>
 ### CLI Usage
 
 ```sh
-gif-cli my-animation.gif
+<%- _.pack.name %> my-animation.gif
 # or even shorter
 gif my-animation.gif
 ```
 
 Then your animated gif will appear in your terminal. :tada:
 
+<% } %>
+
+<% // Show the example if there is one %>
+<% if (example) { %>
+<% var exStrPath = Path.join(example, "index.js"); %>
+<% if (!IsThere(exStrPath)) { %>
+<%   example = null; %>
+<% } %>
+<% if (example) { %>
 ## Example
 
+<% if (isCli) { %>
 Here is an example how to use this package as library.
+<% } %>
+
+<% var exStr = Fs.readFileSync(exStrPath, "utf-8"); %>
+<% exStr = exStr.replace("../lib", _.pack.name) %>
 
 ```js
-// Dependencies
-var GifCli = require("gif-cli")
-  , CliFrames = require("cli-frames")
-  ;
-
-// Convert the gif file into text frames
-GifCli(__dirname + "/nyantocat.gif", function (err, frames) {
-    if (err) { return Logger.log(err, "error"); }
-
-    // Show the animation
-    var animation = new CliFrames();
-    animation.load(frames);
-    animation.start({
-        repeat: true
-      , delay: 50
-    });
-});
-
+<%- exStr %>
 ```
+<% } %>
+<% } %>
 
 ## Press Highlights
 None yet. If you wrote or found an article about this project, [add it][contributing] in this section.  :memo:
 
+<% // Documentation %>
 ## Documentation
 
+<% if (isCli) { %>
 For full API reference, see the [DOCUMENTATION.md][docs] file.
+<% } else { %>
+<% docs = docs.split("\n").slice(3).join("\n"); %>
+<%- docs %>
+<% } %>
 
+<% // How to contribute %>
 ## How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
+<% // License information %>
 ## License
 [KINDLY][license] © [Ionică Bizău][website]–The [LICENSE](/LICENSE) file contains
 a copy of the license.
 
+<% // Links %>
 [license]: http://ionicabizau.github.io/kindly-license/?author=Ionic%C4%83%20Biz%C4%83u%20%3Cbizauionica@gmail.com%3E&year=2015
 [contributing]: /CONTRIBUTING.md
 [website]: http://ionicabizau.net

@@ -11,7 +11,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Ionică Bizău <bizauionica@gmail.com>",
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
   "license": "KINDLY",
   "directories": {
     "doc": "doc",
@@ -35,7 +35,38 @@
   },
   "homepage": "https://github.com/IonicaBizau/gif-cli",
   "blah": {
-    "ex_img": "doc/nyan.gif"
+    "ex_img": "doc/nyan.gif",
+    "show_installation": false,
+    "installation": [
+      {
+        "h2": "Installation"
+      },
+      {
+        "p": "This tool uses `image-to-ascii` as dependency–that means you have to [install GraphicsMagick first](https://github.com/IonicaBizau/image-to-ascii#installation). Then you can install `gif-cli`:"
+      },
+      {
+        "code": {
+          "language": "sh",
+          "content": "$ npm i -g gif-cli"
+        }
+      },
+      {
+        "h2": "CLI Usage"
+      },
+      {
+        "code": {
+          "language": "sh",
+          "content": [
+            "gif-cli my-animation.gif",
+            "# or even shorter",
+            "gif my-animation.gif"
+          ]
+        }
+      },
+      {
+        "p": "Then your animated gif will appear in your terminal. :tada:"
+      }
+    ]
   },
   "dependencies": {
     "ascii-frames": "^0.2.0",

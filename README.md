@@ -1,4 +1,5 @@
 # `$ gif-cli` [![Support this project][donate-now]][paypal-donations]
+
 Gif animations in your terminal!
 
 [![gif-cli](doc/nyan.gif)](#)

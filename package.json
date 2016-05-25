@@ -1,6 +1,6 @@
 {
   "name": "gif-cli",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Gif animations in your terminal!",
   "main": "lib/index.js",
   "bin": {
@@ -86,6 +86,7 @@
     "src/",
     "resources/",
     "menu/",
+    "scripts/",
     "cli.js",
     "index.js"
   ]

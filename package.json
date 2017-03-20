@@ -1,6 +1,6 @@
 {
   "name": "gif-cli",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Gif animations in your terminal!",
   "main": "lib/index.js",
   "bin": {
@@ -11,7 +11,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "author": "Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)",
   "license": "MIT",
   "directories": {
     "doc": "doc",
@@ -82,12 +82,11 @@
     "bin/",
     "app/",
     "lib/",
-    "build/",
     "dist/",
     "src/",
+    "scripts/",
     "resources/",
     "menu/",
-    "scripts/",
     "cli.js",
     "index.js"
   ]

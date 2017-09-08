@@ -6,6 +6,7 @@ You can see below the API reference of this module.
 Converts the gif file into ASCII frames.
 
 #### Params
+
 - **String** `path`: The input gif file path.
 - **Function** `callback`: The callback function.
 

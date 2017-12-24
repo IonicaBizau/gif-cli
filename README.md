@@ -11,17 +11,21 @@
 
 ## Installation
 
+
 This tool uses `image-to-ascii` as dependency–that means you have to [install GraphicsMagick first](https://github.com/IonicaBizau/image-to-ascii#installation). Then you can install `gif-cli`:
 
 ```sh
 $ npm i -g gif-cli
 ```
+
 ## CLI Usage
+
 ```sh
 gif-cli my-animation.gif
 # or even shorter
 gif my-animation.gif
 ```
+
 
 Then your animated gif will appear in your terminal. :tada:
 
@@ -29,10 +33,14 @@ Then your animated gif will appear in your terminal. :tada:
 ## :clipboard: Example
 
 
-Here is an example how to use this package as library. To install it locally, as library, you can do that using `npm`:
+Here is an example how to use this package as library. To install it locally, as library, you can do that using `npm` (or `yarn`):
 
 ```sh
-$ npm i --save gif-cli
+# Using npm
+npm install --save gif-cli
+
+# Using yarn
+yarn add gif-cli
 ```
 
 
@@ -65,7 +73,9 @@ There are few ways to get help:
 
  1. Please [post questions on Stack Overflow](https://stackoverflow.com/questions/ask). You can open issues with questions, as long you add a link to your Stack Overflow question.
  2. For bug reports and feature requests, open issues. :bug:
+
  3. For direct and quick help, you can [use Codementor](https://www.codementor.io/johnnyb). :rocket:
+
 
 
 ## :memo: Documentation
@@ -94,6 +104,11 @@ However, if you get some profit from this or just want to encourage me to contin
 Thanks! :heart:
 
 
+## :dizzy: Where is this library used?
+If you are using this library in one of your projects, add it in this list. :sparkles:
+
+
+ - [`reimertz`](https://github.com/reimertz/reimertz#readme) (by Pierre Reimertz)—pierre reimertz on the cli
 
 ## :scroll: License
 
